@@ -122,6 +122,10 @@
                     <i class="fa-solid fa-user"></i>
                     <a href="/profile">Profile</a>
                 </button>
+                <button class="nav-button">
+                    {% comment %} <i class="fa-solid fa-user"></i> {% endcomment %}
+                    <a href="/logout">Logout</a>
+                </button>
                 {% else %}
                 <button class="nav-button">
                     <i class="fa-solid fa-user"></i>
@@ -139,7 +143,6 @@
     </div>
 
     <div class="places-grid">
-
         {% for i in places %}
         <div class="place-card">
             <a href="/details/{{i.id}}">

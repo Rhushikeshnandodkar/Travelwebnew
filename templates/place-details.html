@@ -428,26 +428,29 @@
             </div>
 
             <div class="nav-links-box-2">
-                <div class="nav-links-box-2">
-                    <div class="nav-links">
-                        <a href="/" class="active">Home</a>
-                        <a href="/about">About</a>
-                        <a href="/explore">Explore</a>
-                        <a href="/stories">Travel Stories</a>
-                    </div>
-                    {% if user.is_authenticated %}
-                    <button class="nav-button">
-                        <i class="fa-solid fa-user"></i>
-                        <a href="/profile">Profile</a>
-                    </button>
-                    {% else %}
-                    <button class="nav-button">
-                        <i class="fa-solid fa-user"></i>
-                        <a href="/sign-up">Sign In</a>
-                    </button>
-                    {% endif %}
+                <div class="nav-links">
+                    <a href="/" class="active">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/explore">Explore</a>
+                    <a href="/stories">Travel Stories</a>
                 </div>
+                {% if user.is_authenticated %}
+                <button class="nav-button">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="/profile">Profile</a>
+                </button>
+                <button class="nav-button">
+                    {% comment %} <i class="fa-solid fa-user"></i> {% endcomment %}
+                    <a href="/logout">Logout</a>
+                </button>
+                {% else %}
+                <button class="nav-button">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="/signup">Sign In</a>
+                </button>
+                {% endif %}
             </div>
+        </div>
     </nav>
 
     <div class="container">
